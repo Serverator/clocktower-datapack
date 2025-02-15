@@ -1,0 +1,1 @@
+execute if block 0 -43 1 minecraft:chipped_anvil run function botc:game/execute_player
