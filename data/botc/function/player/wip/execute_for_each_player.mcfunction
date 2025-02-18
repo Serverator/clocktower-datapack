@@ -5,4 +5,4 @@ $execute if data storage botc:players {$(color):{executant:true}} unless data st
 
 data modify storage botc:data player_data merge value {executant:false,fake_executant:false}
 
-$function botc:player/update_lamp_macro with storage botc:players $(color)
+# $function botc:player/update_lamp_macro with storage botc:players $(color)

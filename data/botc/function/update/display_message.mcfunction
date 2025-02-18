@@ -1,0 +1,1 @@
+execute if entity @a[scores={return_to_town_square=1..}] run function botc:game/display_return_message

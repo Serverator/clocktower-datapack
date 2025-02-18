@@ -13,7 +13,6 @@ In the finished version I plan to have:
 - Voicechat integration (Either [Plasmo Voice](https://modrinth.com/plugin/plasmo-voice) or [Simple Voice Chat](https://modrinth.com/plugin/simple-voice-chat))
 - Importable .json game scripts
 
-
 ### Special thanks
 
 This datapack is heavily ispired by [Yogscast's Blood on the Clocktower videos](https://www.youtube.com/watch?v=lF96Jd3Eaeg&list=PL3XZNMGhpynNejnoM0dUcoQHphz3ax00M). Special thanks to all the folks who worked on their map, datapack and all the people who made their content happen!

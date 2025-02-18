@@ -1,1 +1,0 @@
-$execute unless entity @a[tag=$(color)] run return run function

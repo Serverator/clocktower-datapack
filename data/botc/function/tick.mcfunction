@@ -1,16 +1,17 @@
-effect give @a minecraft:instant_health infinite 4 true
-execute as @a run attribute @s minecraft:fall_damage_multiplier base set 0
 
-# execute as @a[tag=!dead,tag=used_ghost_vote] run tag @s remove used_ghost_vote
 
-# execute if entity @a[tag=update_lamps] run function botc:game/update_lamps
-# execute as @a[tag=update_lamps] run tag @s remove update_lamps
+# Main player loop
+function botc:player/count_players
 
-execute if entity @a[scores={return_to_town_square=1..}] run function botc:game/display_return_message
+function botc:update/apply_effects
+function botc:update/reset_triggers
 
-execute as @a[tag=storyteller] run scoreboard players enable @s return_to_town_square
-execute as @a[tag=!storyteller] run scoreboard players reset @s return_to_town_square
+execute unless score seat_count game_data = #seat_count game_data run function botc:update/triggers/seat_count_changed
 
-function botc:player/run_on_all_players {command:"botc:player/update/update_player_macro"}
+function botc:player/run_on_all_players {command:"botc:update/foreach_player"}
+
+execute as @a[tag=storyteller] run function botc:update/foreach/apply_effects with storage botc:players storyteller
+
 execute if block 0 -43 1 minecraft:chipped_anvil run function botc:player/run_on_all_players {command:"botc:player/execute_player"}
 
+function botc:update/display_message

@@ -1,0 +1,3 @@
+$execute unless data storage botc:player_data {$(id):{player:""}} run scoreboard players add player_count game_data 1
+$execute unless data storage botc:player_data {$(id):{player:""}} if data storage botc:player_data {$(id):{alive:true}} run scoreboard players add alive_players game_data 1
+$execute unless data storage botc:player_data {$(id):{player:""}} if data storage botc:player_data {$(id):{voted:true}} run scoreboard players add total_votes game_data 1
